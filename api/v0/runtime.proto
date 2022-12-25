@@ -1,0 +1,15 @@
+syntax = "proto3";
+package runtime;
+
+service Daemon {
+    rpc Run(RunRequest) returns (RunResponse) {}
+}
+
+message RunRequest {
+    string image = 1;
+}
+
+message RunResponse {
+    string image = 1;
+    string message = 2;
+}
